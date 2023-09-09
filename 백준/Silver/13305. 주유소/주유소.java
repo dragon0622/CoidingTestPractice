@@ -5,8 +5,8 @@ public class Main {
         
         Scanner sc =new Scanner(System.in);
         int numOfCity = sc.nextInt();
-        int []dis = new int[numOfCity - 1];
-        int []fuel = new int[numOfCity];
+        long []dis = new long[numOfCity - 1];
+        long []fuel = new long[numOfCity];
 
         for (int i = 0; i < numOfCity-1; i++) {
             dis[i] = sc.nextInt();
@@ -16,7 +16,7 @@ public class Main {
             fuel[i] = sc.nextInt();
         }
 
-        int charger = fuel[0];
+        long charger = fuel[0];
         int cost = 0;
         
         for (int i = 0; i < numOfCity-1; i++) {
