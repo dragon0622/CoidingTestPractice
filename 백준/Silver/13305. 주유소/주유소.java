@@ -20,13 +20,10 @@ public class Main {
         int cost = 0;
         
         for (int i = 0; i < numOfCity-1; i++) {
-            if (fuel[i]>fuel[i+1]) {
-                cost += charger * dis[i];
+            if (fuel[i]>fuel[i+1]) {      
                 charger = fuel[i+1];
-            }
-            else{
-                cost += charger * dis[i];
-            }
+            } 
+            cost += charger * dis[i];       
         }
 
         System.out.println(cost);
