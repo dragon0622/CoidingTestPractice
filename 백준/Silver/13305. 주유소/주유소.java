@@ -17,7 +17,7 @@ public class Main {
         }
 
         long charger = fuel[0];
-        int cost = 0;
+        long cost = 0;
         
         for (int i = 0; i < numOfCity-1; i++) {
             if (fuel[i]>fuel[i+1]) {      
