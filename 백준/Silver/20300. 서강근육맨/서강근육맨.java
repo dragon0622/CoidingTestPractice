@@ -10,14 +10,12 @@ public class Main {
             M[i] = sc.nextLong();
         }
 
-        
+        long sum = 0;
+        long max = 0;
         Arrays.sort(M);
 
-        long sum = 0;
-        long max = M[N-1];
-
         if(N % 2 == 1){
-            for (int i = 1; i <= N/2; i++) {
+            for (int i = 1; i < N/2; i++) {
                 sum = M[i-1] + M[N - i - 1];
 
                 if(max<sum){
@@ -26,7 +24,7 @@ public class Main {
             }
         }
         else{
-            for (int i = 1; i <= N/2; i++) {
+            for (int i = 1; i < N/2; i++) {
                 sum = M[i-1] + M[N - i];
 
                 if(max<sum){
