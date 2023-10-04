@@ -7,38 +7,31 @@ public class Main {
 
         int N = sc.nextInt();
         int M = sc.nextInt();
-        String s = sc.next();
+        String s = "";
 
-        String arr = make(N);
+        s = sc.next();
 
-        String test = "";
+        int result = 0;
         int cnt = 0;
 
-        for (int i = 0; i <= M-arr.length(); i++) {
-            if (M < arr.length()){
-                break;
-            }
-            test = s.substring(i, arr.length() + i);
-            
-            if(test.equals(arr)){
+        for (int i = 1; i < M-1; i++) {
+            if (s.charAt(i-1) == 'I' && s.charAt(i) == 'O' && s.charAt(i+1) == 'I'){
                 cnt++;
+
+                if (cnt == N){
+                    cnt--;
+                    result++;
+                }
+                i++;
+            }
+            else{
+                cnt = 0;
             }
         }
-        System.out.println(cnt);
+
+        System.out.println(result);
     }
 
-    private static String make(int n) {
-        String arr = "";
-        
-        for (int i = 0; i < n; i++) {
-            arr+="I";
-            arr+="O";
-        }
-        
-        arr += "I";
-        
-        return arr;
-    }
 }
 
 
