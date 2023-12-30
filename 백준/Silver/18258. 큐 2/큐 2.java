@@ -1,3 +1,4 @@
+//밑에 해설이랑은 다른 버전(append.append 미적용)
 import java.io.*;
 import java.util.*;
 
@@ -22,43 +23,43 @@ public class Main {
                 case "pop":
                     Integer item = queue.poll();
                     if (item == null){
-                        sb.append(-1).append("\n");
+                        sb.append("-1\n");
                     }
                     else{
-                        sb.append(item).append("\n");
+                        sb.append(item + "\n");
                     }
                     break;
 
                 case "size":
-                    sb.append(queue.size()).append("\n");
+                    sb.append(queue.size()+"\n");
                     break;
 
                 case "empty":
                     if (queue.isEmpty()){
-                        sb.append(1).append("\n");
+                        sb.append("1\n");
                     }
                     else{
-                        sb.append(0).append("\n");
+                        sb.append("0\n");
                     }
                     break;
 
                 case "front":
                     Integer item2 = queue.peek();
                     if (item2 == null){
-                        sb.append(-1).append("\n");
+                        sb.append("-1\n");
                     }
                     else{
-                        sb.append(item2).append("\n");
+                        sb.append(item2 + "\n");
                     }
                     break;
 
                 case "back":
                     Integer item3 = queue.peekLast();
                     if (item3 == null){
-                        sb.append(-1).append("\n");
+                        sb.append("-1\n");
                     }
                     else{
-                        sb.append(item3).append("\n");
+                        sb.append(item3 + "\n");
                     }
                     break;
             }
