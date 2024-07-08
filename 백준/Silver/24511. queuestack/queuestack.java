@@ -1,11 +1,10 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         Deque<Integer> deque = new ArrayDeque<>();
         StringBuilder sb = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
@@ -31,6 +30,8 @@ public class Main {
             deque.offerFirst(tmp);
             sb.append(deque.pollLast()+" ");
         }
-        System.out.println(sb);
+        bw.write(sb.toString());
+        bw.flush();
+        bw.close();
     }
 }
