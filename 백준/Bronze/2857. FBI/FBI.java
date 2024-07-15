@@ -15,10 +15,10 @@ public class Main {
         }
 
         if(sb.length() == 0 ){
-            sb.append("HE GOT AWAY!");
+            System.out.println("HE GOT AWAY!");
         }
-
-        System.out.println(sb);
-
+        else{
+            System.out.println(sb);    
+        }
     }
 }
