@@ -1,25 +1,28 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int n = Integer.parseInt(br.readLine().trim());
-
+        int n = Integer.parseInt(st.nextToken());
         int sum = 0;
-        sum += getSumOfAbsoluteValues(br.readLine());
-        sum += getSumOfAbsoluteValues(br.readLine());
+
+        st = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < n; i++) {
+            sum += Math.abs(Integer.parseInt(st.nextToken()));
+        }
+
+        st = new StringTokenizer(br.readLine());
+
+        for (int i = 0; i < n; i++) {
+            sum += Math.abs(Integer.parseInt(st.nextToken()));
+        }
 
         System.out.println(sum);
-    }
-
-    private static int getSumOfAbsoluteValues(String input) {
-        return Arrays.stream(input.split("\\s+"))
-                     .mapToInt(Integer::parseInt)
-                     .map(Math::abs)
-                     .sum();
     }
 }
