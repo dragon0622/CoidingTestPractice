@@ -1,35 +1,38 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.StringTokenizer;
-import java.io.IOException;
 import java. util.LinkedList;
 
 public class Main {
 
     static int[][] baechu;
-    static boolean[][] check;
+    static boolean[][] invite;
     static int garo;
     static int sero;
 
     public static void main(String[] args) throws IOException{
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
 
-        int cnt = 0;
+
         int test = Integer.parseInt(bf.readLine());
 
         for (int i = 0; i < test; i++) {
+            int jirungs = 0;
             st = new StringTokenizer(bf.readLine(), " ");
             garo = Integer.parseInt(st.nextToken());
             sero = Integer.parseInt(st.nextToken());
             baechu = new int[garo][sero];
-            check = new boolean[garo][sero];
+            invite = new boolean[garo][sero];
 
             extracted(st, bf);
 
-            System.out.println(getCnt(cnt));
-        }
+            jirungs = getCnt(jirungs);
 
+            bw.write(String.valueOf(jirungs)+"\n");
+        }
+        bw.flush();
+        bw.close();
     }
 
     private static void extracted(StringTokenizer st, BufferedReader bf) throws IOException {
@@ -42,16 +45,16 @@ public class Main {
         }
     }
 
-    private static int getCnt(int cnt) {
+    private static int getCnt(int jirungs) {
         for (int j = 0; j < garo; j++) {
             for (int k = 0; k < sero; k++) {
-                if(baechu[j][k] == 1 && !check[j][k]){
+                if(baechu[j][k] == 1 && !invite[j][k]){
                     bfs(j, k);
-                    cnt++;
+                    jirungs++;
                 }
             }
         }
-        return cnt;
+        return jirungs;
     }
 
     private static void bfs(int startX, int startY){
@@ -59,7 +62,7 @@ public class Main {
 
         queue.offer(new int[] {startX, startY});
 
-        check[startX][startY] = true;
+        invite[startX][startY] = true;
 
         int[] X = {0,0,-1,1};
         int[] Y = {-1,1,0,0};
@@ -75,9 +78,9 @@ public class Main {
                     continue;
                 }
 
-                if (baechu[x][y] == 1 && !check[x][y]) {
+                if (baechu[x][y] == 1 && !invite[x][y]) {
                     queue.add(new int[] {x, y});
-                    check[x][y] = true;
+                    invite[x][y] = true;
                 }
             }
         }
