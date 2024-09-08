@@ -5,7 +5,7 @@ class Solution {
         for(int item : numbers){
             answer += item;
         }
-        
+          
         answer = answer / numbers.length;
         
         return answer;
