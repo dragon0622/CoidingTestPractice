@@ -16,4 +16,4 @@
 
 [트럭 회고](https://github.com/dragon0622/CoidingTestPractice/blob/main/%EB%B0%B1%EC%A4%80/Silver/13335.%E2%80%85%ED%8A%B8%EB%9F%AD/retrospect.md)
 
-[창고 다각형](https://github.com/dragon0622/CoidingTestPractice/blob/main/%EB%B0%B1%EC%A4%80/Silver/2304.%E2%80%85%EC%B0%BD%EA%B3%A0%E2%80%85%EB%8B%A4%EA%B0%81%ED%98%95/retrospect.md)
+[창고 다각형 회고](https://github.com/dragon0622/CoidingTestPractice/blob/main/%EB%B0%B1%EC%A4%80/Silver/2304.%E2%80%85%EC%B0%BD%EA%B3%A0%E2%80%85%EB%8B%A4%EA%B0%81%ED%98%95/retrospect.md)
