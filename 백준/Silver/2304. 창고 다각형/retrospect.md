@@ -1,6 +1,8 @@
 # 문제 회고
 문제를 풀면서 생각을 엄청많이 하게되었던 문제이다.
 
+문제를 풀며 공부한 내용을 [블로그](https://velog.io/@iamdragon/posts)에 기록해 두었다.
+
 ### 첫번째 시도
 첫 시도에서 두가지를 정의하고 접근해봤다.
 
@@ -73,4 +75,4 @@ private static int left(TreeMap<Integer, Integer> map, Map.Entry<Integer, Intege
 
 이번 문제를 통해 treemap에 내부 메소드에 대해 공부해 볼 수 있었다.
 
-해당 공부내용은 블로그에 적어두겠다.
+해당 공부내용은 [블로그](https://velog.io/@iamdragon/posts)에 적어두겠다.
