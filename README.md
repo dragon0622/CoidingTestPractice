@@ -30,5 +30,4 @@ retrospect.md 에는 문제에 대한 회고 내용을 중점으로 기록합니
 
 [절대값 힙](https://github.com/dragon0622/CoidingTestPractice/blob/main/%EB%B0%B1%EC%A4%80/Silver/11286.%E2%80%85%EC%A0%88%EB%8C%93%EA%B0%92%E2%80%85%ED%9E%99/README.md)
 
-[AC]
-(https://github.com/dragon0622/CoidingTestPractice/blob/main/%EB%B0%B1%EC%A4%80%2FGold%2F5430.%E2%80%85AC%2Fretrospect.md)
+[AC](https://github.com/dragon0622/CoidingTestPractice/blob/main/%EB%B0%B1%EC%A4%80%2FGold%2F5430.%E2%80%85AC%2Fretrospect.md)
