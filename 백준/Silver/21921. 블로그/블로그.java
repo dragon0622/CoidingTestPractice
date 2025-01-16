@@ -14,51 +14,41 @@ public class Main {
         }
 
         solution(arr, X);
-
     }
 
     private static void solution(int[] arr, int x) {
 
         int max = 0;
         int numbers = 0;
+
         int sum = 0;
-
-        int start = 0;
-        int end = x-1;
-        int dump = 0;
-
-        for (int i = start; i <= end; i++) {
-            dump += arr[i];
+        for (int i = 0; i < x; i++) {
+            sum += arr[i];
         }
 
-        while(end < arr.length){
+        int start = 0;
+        int end = x - 1;
+        int dump = sum;
 
-            if (start == 0){
-                sum = dump;
-            }
-            else{
-                dump = dump-arr[start-1] + arr[end];
-                sum = dump;
-            }
-
-            if (sum > max){
+        while (end < arr.length) {
+            if (sum > max) {
                 max = sum;
                 numbers = 1;
-            }
-            else if(sum == max){
+            } else if (sum == max) {
                 numbers++;
             }
 
             start++;
             end++;
+            if (end < arr.length) {
+                sum = sum - arr[start - 1] + arr[end];
+            }
         }
 
-        if (sum == 0){
+        if (max == 0) {
             System.out.println("SAD");
-        }
-        else{
+        } else {
             System.out.println(max + "\n" + numbers);
         }
-
     }
 }
