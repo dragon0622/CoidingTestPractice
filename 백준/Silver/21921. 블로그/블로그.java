@@ -28,7 +28,6 @@ public class Main {
 
         int start = 0;
         int end = x - 1;
-        int dump = sum;
 
         while (end < arr.length) {
             if (sum > max) {
